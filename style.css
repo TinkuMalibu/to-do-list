@@ -12,5 +12,92 @@ body {
   align-items: center;
   text-align: center;
   padding: 40px;
-  background: url(images/nebula.png) no-repeat center/cover;
+  background: #385d3a;
+}
+
+.container {
+  width: 700px;
+  min-height: 500px;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+input {
+  width: 80%;
+  height: 50px;
+  font-size: 25px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+button {
+  width: 150px;
+  height: 60px;
+  color: white;
+  background-color: #385d3a;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#task-list {
+  width: 80px;
+  margin-top: 20px;
+}
+
+.task {
+  width: 100%;
+  min-height: 70px;
+  font-size: 25px;
+  padding: 10px;
+  color: white;
+  background-color: chartreuse;
+  border-radius: 20px;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  background-color: black;
+  border:none;
+}
+
+.tarea.p {
+  max-width: 350px;
+}
+
+i {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-complete {
+  color: rgb(196, 249, 196);
+}
+
+.icon-delete {
+  color: rgb(249, 196, 196);
+}
+
+.icon-complete:hover,
+.icon-delete:hover {
+  color: rgb(255, 255, 255, 0.523);
 }
