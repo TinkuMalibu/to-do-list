@@ -1,26 +1,30 @@
+/* Estilos generales */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 40px 0;
   text-align: center;
-  padding: 40px;
-  background: #385d3a;
+  background: url(imagenes/fondo.jpg) no-repeat center center/ cover;
 }
 
-.container {
+/* Contenedor principal */
+
+.contenedor {
   width: 700px;
   min-height: 500px;
-  background: #fff;
+  background-color: white;
   padding: 40px;
-  border: 1px solid black;
+  border: 5px solid black;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -28,10 +32,14 @@ body {
   align-items: center;
 }
 
+/* Titulo */
+
 h1 {
-  font-size: 3em;
+  font-size: 50px;
   font-weight: bold;
 }
+
+/* Ingresar texto */
 
 input {
   width: 80%;
@@ -39,49 +47,63 @@ input {
   font-size: 25px;
   margin: 20px;
   padding: 10px;
-  border: 2px solid grey;
+  border: 4px solid #404040;
+  border-radius: 10px;
 }
+
+/* Boton */
 
 button {
   width: 150px;
   height: 60px;
+  padding: 10px;
   color: white;
-  background-color: #385d3a;
-  border: none;
+  background-color: #1312a8;
+  font-size: 22px;
   border-radius: 20px;
+  border: 0px solid black;
   cursor: pointer;
   user-select: none;
 }
 
-#task-list {
-  width: 80px;
+/* Lista de tareas */
+
+#lista-de-tareas {
+  width: 80%;
   margin-top: 20px;
 }
 
-.task {
+/* Tareas individuales */
+
+.tarea {
   width: 100%;
   min-height: 70px;
   font-size: 25px;
   padding: 10px;
+  margin-top: 10px;
   color: white;
-  background-color: chartreuse;
-  border-radius: 20px;
-  border: 2px solid grey;
+  background-color: #407ba6;
+  border: 2px solid black;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
+  text-align: left;
 }
 
-.task.completed {
+/* Estilo para tarea completada */
+
+.tarea.completada {
   text-decoration: line-through;
   background-color: black;
-  border:none;
+  border: none;
 }
 
-.tarea.p {
+.tarea p {
   max-width: 350px;
 }
+
+/* Iconos */
 
 i {
   margin: 5px;
@@ -89,15 +111,15 @@ i {
   cursor: pointer;
 }
 
-.icon-complete {
-  color: rgb(196, 249, 196);
+.icono-completar {
+  color: rgb(0, 255, 0);
 }
 
-.icon-delete {
-  color: rgb(249, 196, 196);
+.icono-eliminar {
+  color: rgb(255, 255, 255);
 }
 
-.icon-complete:hover,
-.icon-delete:hover {
-  color: rgb(255, 255, 255, 0.523);
+.icono-completar:hover,
+.icono-eliminar:hover {
+  background-color: rgba(255, 255, 255, 0.523);
 }
