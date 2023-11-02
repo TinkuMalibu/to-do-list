@@ -28,6 +28,7 @@ let agregarTarea = () => {
     iconos.append(completar, eliminar);
 
     listaDeTareas.appendChild(nuevaTarea);
+    input.value = '';
   } else {
     alert('Debes ingresar una tarea');
   }
@@ -45,3 +46,9 @@ let eliminarTarea = (e) => {
 }
 
 boton.addEventListener('click', agregarTarea);
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    agregarTarea();
+  }
+});
